@@ -1,8 +1,8 @@
-import { use, useContext, useState } from "react";
-import { PostContext } from "../context/PostContext";
+import { useState } from "react";
+import { usePosts } from "../context/PostContext";
 
 export const Header = () => {
-  const postCtx = useContext(PostContext);
+  const postCtx = usePosts();
   const [titleInput, setTitleInput] = useState("");
   const [textInput, setTextInput] = useState("");
 
